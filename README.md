@@ -90,4 +90,16 @@
 * LastChall, ELF 32bit
 * Mở lên với IDA 32bit kiểm tra,
 * Shift + f12 để mở bảng strings window, mình sẽ follow theo đoạn string "Please input %d random number\n" vì đây có thể là function chính của chương trình.
-* 
+* Trong chương trình này có sử dụng ptrace để trace chính nó, một chương trình chỉ có thể attach 1 chương trình debug tại một thời điểm.
+* Khi ta thực hiện debug trên IDA, ptrace trong chương trình sẽ không thể hoạt động được, nên ptrace thường được dùng để chống debug.
+* Mình sẽ sử dụng patch để bypass kết quả trả về của ptrace để có thể để chương trình hoạt động đúng.
+* ![image](https://user-images.githubusercontent.com/83124718/116092041-a87ae700-a6cf-11eb-8490-8c39dd6d7d43.png)
+* Ở đây có 2 chuỗi data, aJHlagHkeFhphaH nhìn có vẻ là xáo trộn của FakeFlag nên mình sẽ pass và byte_565A3040 sẽ là đoạn data có chứa flag.
+* Nhấn phím 'x' trên IDA để follow biến này.
+* ![image](https://user-images.githubusercontent.com/83124718/116093760-27245400-a6d1-11eb-8996-89be3b48eccb.png)
+* Sau khi kiểm tra có vẻ function sub_565A02ED sẽ trả về giá trị flag.
+* Mình sẽ debug path program để có thể chạy được câu lệnh này trong sub_565A02ED
+* ![image](https://user-images.githubusercontent.com/83124718/116094157-7ff3ec80-a6d1-11eb-9ce6-917c5c7d3232.png)
+* Sau khi chỉnh sửa patch và chạy thành công, mình thu được flag của challenge này.
+* **Flag: MemberCTF{Th3-l@st-Ch4ll3ng3_g00d-j0b}**
+
