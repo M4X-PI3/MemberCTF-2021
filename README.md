@@ -82,7 +82,7 @@
 * Do đó mình sẽ đặt break point ở ngay chỗ remove("hello.asm") và tiến hành debug.
 * Từ đó mình sẽ có thể đọc và ghi lại được nội dung của file hello.asm trước khi chương trình xóa
 * Trong file hello.asm, lần lượt in ra màn hình từng ký tự riêng biệt, 
-* ![image](https://user-images.githubusercontent.com/83124718/116082374-867c6700-a6c5-11eb-9796-8d2dada04186.png)
+* ![image](https://user-images.githubusercontent.com/83124718/116108974-981e3880-a6de-11eb-8e62-0fbcf5e36565.png)
 * Mình chuyển data hết thành dạng ascii và thu được flag
 * **Flag: MemberCTF{eazy_asm}**
 
