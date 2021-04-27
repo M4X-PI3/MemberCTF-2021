@@ -41,7 +41,7 @@
 * Như vậy kết quả của chương trình này là tổng 1+2+3+..+n với n là số user nhập
 * Với input là 123 -> kết quả là (123+1)*123/2 = 7626
 * Và đây là flag của challlenge này.
-* Flag: MemberCTF{0xCA}
+* **Flag: MemberCTF{0x1DCA}**
 
 # 5> Pascal
 * Xor_easy.pas
